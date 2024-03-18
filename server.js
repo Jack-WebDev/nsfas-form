@@ -12,11 +12,7 @@ const PORT = process.env.PORT || 5001
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 app.use(
-  cors({
-    origin: ["http://localhost:3001"],
-    methods: ["POST"],
-    credentials: true,
-  })
+  cors()
 );
 
 app.use("/api", formRouter);
